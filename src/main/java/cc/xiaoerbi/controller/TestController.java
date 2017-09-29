@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequestMapping("/test")
 public class TestController {
     private UserService userService;
 
@@ -16,7 +17,7 @@ public class TestController {
         this.userService = userService;
     }
 
-    @RequestMapping("/test")
+    @RequestMapping("/user")
     public String test(@RequestParam("name") String name) {
 
         return JSONObject.fromObject(userService.findByName(name)).toString();
