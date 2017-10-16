@@ -22,6 +22,7 @@ public class WebAppConfigurer extends WebMvcConfigurerAdapter {
         super.addInterceptors(registry);
 
 
+
         //登陆验证
         InterceptorRegistration addInterceptor = registry.addInterceptor(getSecurityInterceptor());
         // 排除配置
